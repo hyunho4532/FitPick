@@ -5,9 +5,10 @@ export const Container = styled.View`
     width: 100%;
     height: 100%;
     background-color: white;
+    flex: 1;
 `
 
 /** 상위 텍스트 (부모 속성) */
 export const Text = styled.Text`
-    font-size: 22px;
+    font-size: 14px;
 `
