@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { View } from 'react-native';
 import * as SplashScreen from 'expo-splash-screen';
 import { Stack } from 'expo-router';
+import { useLayoutRootView } from '@/hooks/useLayoutRootView';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -11,31 +12,8 @@ SplashScreen.setOptions({
 });
 
 export default function RootLayout() {
-  const [appIsReady, setAppIsReady] = useState(false);
 
-  useEffect(() => {
-    async function prepare() {
-      try {
-        await new Promise(resolve => setTimeout(resolve, 2000));
-      } catch (e) {
-        console.warn(e);
-      } finally {
-        setAppIsReady(true);
-      }
-    }
-
-    prepare();
-  }, []);
-
-  const onLayoutRootView = useCallback(() => {
-    if (appIsReady) {
-      SplashScreen.hide();
-    }
-  }, [appIsReady]);
-
-  if (!appIsReady) {
-    return null;
-  }
+  const onLayoutRootView = useLayoutRootView();
 
   return (
     <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
