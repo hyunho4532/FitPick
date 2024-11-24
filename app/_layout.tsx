@@ -2,6 +2,7 @@ import { View } from 'react-native';
 import { Stack } from 'expo-router';
 import { useLayoutRootView } from '@/hooks/useLayoutRootView';
 import { initSplashScreen } from '@/shared/initSplashScreen';
+import { Stacks } from '@/components/stack';
 
 initSplashScreen({
   _duration: 3000,
@@ -14,10 +15,7 @@ export default function RootLayout() {
 
   return (
     <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }}  />
-        <Stack.Screen name="+not-found" />
-      </Stack>
+      <Stacks />
     </View>
   );
 }
