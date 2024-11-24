@@ -1,3 +1,6 @@
-export default function Splash() {
-
+export default function SplashScreen() {
+    return (
+        <>
+        </>
+    )
 }
