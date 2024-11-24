@@ -1,14 +1,11 @@
-import { useCallback, useEffect, useState } from 'react';
 import { View } from 'react-native';
-import * as SplashScreen from 'expo-splash-screen';
 import { Stack } from 'expo-router';
 import { useLayoutRootView } from '@/hooks/useLayoutRootView';
+import { initSplashScreen } from '@/shared/initSplashScreen';
 
-SplashScreen.preventAutoHideAsync();
-
-SplashScreen.setOptions({
-  duration: 1000,
-  fade: true,
+initSplashScreen({
+  _duration: 3000,
+  _fade: true
 });
 
 export default function RootLayout() {

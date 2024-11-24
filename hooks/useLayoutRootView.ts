@@ -1,4 +1,4 @@
-import { SplashScreen } from "expo-router";
+import SplashScreen from "expo-splash-screen";
 import { useCallback, useEffect, useState } from "react"
 
 export function useLayoutRootView() {
@@ -13,7 +13,7 @@ export function useLayoutRootView() {
         }
     }, []);
 
-    const onLayoutRootView = useCallback(() => {
+    const onLayoutRootView = useCallback(async () => {
         if (appIsReady) {
             SplashScreen.hide();
         }
