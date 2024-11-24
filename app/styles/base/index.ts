@@ -1,1 +1,5 @@
-/** 가장 상위 컴포넌트를 정의한다. */
+import styled, { css } from '@emotion/native'
+
+export const Container = styled.View`
+    width: 
+`

@@ -22,7 +22,7 @@ export default function TabLayout() {
         name="index"
         options={{
           title: '홈',
-          tabBarIcon: ({ color }) => <IconSymbol size={20} name="house.fill" color={color} />,
+          tabBarIcon: ({ color }) => <AntDesign name='home' size={20} color={color} />,
         }}
       />
       <Tabs.Screen
@@ -37,7 +37,7 @@ export default function TabLayout() {
         name="profile"
         options={{
           title: '프로필',
-          tabBarIcon: ({ color }) => <IconSymbol size={20} name="paperplane.fill" color={color} />,
+          tabBarIcon: ({ color }) => <AntDesign name='profile' size={20} color={color} />,
         }}
       />
     </Tabs>
