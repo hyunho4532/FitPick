@@ -1,7 +1,7 @@
-import { View } from 'react-native';
 import { useLayoutRootView } from '@/hooks/useLayoutRootView';
 import { initSplashScreen } from '@/shared/initSplashScreen';
 import { Stacks } from '@/components/stack';
+import { ContainerInFlex } from './styles/child';
 
 initSplashScreen({
   _duration: 3000,
@@ -13,8 +13,8 @@ export default function RootLayout() {
   const onLayoutRootView = useLayoutRootView();
 
   return (
-    <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
+    <ContainerInFlex onLayout={onLayoutRootView}>
       <Stacks />
-    </View>
+    </ContainerInFlex>
   )
 }
