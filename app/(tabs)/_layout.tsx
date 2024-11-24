@@ -1,8 +1,5 @@
 import { Tabs } from 'expo-router';
 import React from 'react';
-import { HapticTab } from '@/components/HapticTab';
-import { IconSymbol } from '@/components/ui/IconSymbol';
-import TabBarBackground from '@/components/ui/TabBarBackground';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
 import { AntDesign } from '@expo/vector-icons';
@@ -14,15 +11,13 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        headerShown: false,
-        tabBarButton: HapticTab,
-        tabBarBackground: TabBarBackground
+        headerShown: false
       }}>
       <Tabs.Screen
         name="index"
         options={{
           title: '홈',
-          tabBarIcon: ({ color }) => <IconSymbol size={20} name="house.fill" color={color} />,
+          tabBarIcon: ({ color }) => <AntDesign name='home' size={20}color={color} />,
         }}
       />
       <Tabs.Screen
@@ -37,7 +32,7 @@ export default function TabLayout() {
         name="profile"
         options={{
           title: '프로필',
-          tabBarIcon: ({ color }) => <IconSymbol size={20} name="paperplane.fill" color={color} />,
+          tabBarIcon: ({ color }) => <AntDesign name='profile' size={20} color={color} />,
         }}
       />
     </Tabs>
