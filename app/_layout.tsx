@@ -1,44 +1,48 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
+import { useCallback, useEffect, useState } from 'react';
+import { View } from 'react-native';
+import * as SplashScreen from 'expo-splash-screen';
 import { Stack } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
-import { useEffect, useState } from 'react';
-import 'react-native-reanimated';
 
-import { useColorScheme } from '@/hooks/useColorScheme';
-import SplashScreen from './(splash)';
+SplashScreen.preventAutoHideAsync();
+
+SplashScreen.setOptions({
+  duration: 1000,
+  fade: true,
+});
 
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
-  const [isAppReady, setIsAppReady] = useState(false);
-
-  const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
-  });
+  const [appIsReady, setAppIsReady] = useState(false);
 
   useEffect(() => {
-    if (loaded) {
-      const timer = setTimeout(() => {
-        setIsAppReady(true)
-      }, 2000);
-
-      return () => clearTimeout(timer);
+    async function prepare() {
+      try {
+        await new Promise(resolve => setTimeout(resolve, 2000));
+      } catch (e) {
+        console.warn(e);
+      } finally {
+        setAppIsReady(true);
+      }
     }
-  }, [loaded]);
 
-  if (!isAppReady) {
-    return <SplashScreen />
+    prepare();
+  }, []);
+
+  const onLayoutRootView = useCallback(() => {
+    if (appIsReady) {
+      SplashScreen.hide();
+    }
+  }, [appIsReady]);
+
+  if (!appIsReady) {
+    return null;
   }
 
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack screenOptions={{
-        headerShown: false
-      }}>
-        <Stack.Screen name="(tabs)" />
+    <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
+      <Stack>
+        <Stack.Screen name="(tabs)" options={{ headerShown: false }}  />
         <Stack.Screen name="+not-found" />
       </Stack>
-      <StatusBar style="auto" />
-    </ThemeProvider>
+    </View>
   );
 }
