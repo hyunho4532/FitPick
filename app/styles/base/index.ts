@@ -8,6 +8,12 @@ export const Container = styled.View`
     flex: 1;
 `
 
+/** 상위 카드 (부모 속성) */
+export const Card = styled.View`
+    width: 380px;
+    height: 220px;
+`
+
 /** 상위 텍스트 (부모 속성) */
 export const Text = styled.Text`
     font-size: 14px;

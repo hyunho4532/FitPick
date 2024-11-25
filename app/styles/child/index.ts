@@ -1,8 +1,16 @@
 import styled from '@emotion/native'
-import { Container, Text } from '../base'
+import { Card, Container, Text } from '../base'
 
 export const ContainerRoot = styled(Container)`
     flex: 1;
+`
+
+/** 로그인이 진행되지 않았을 때의 Card 속성 */
+export const CardIsNotLogin = styled(Card)`
+    width: 320px;
+    height: 140px;
+    background-color: #FEF9F2;
+    border-radius: 24px;
 `
 
 /** 로그인이 진행되지 않았을 때의 View 속성 */
