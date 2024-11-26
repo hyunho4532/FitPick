@@ -10,7 +10,7 @@ export const CardIsNotLogin = styled(Card)<{
     backgroundColor: string
 }>`
     width: 320px;
-    height: 140px;
+    height: 280px;
     background-color: ${(props) => props.backgroundColor};
     border-radius: 24px;
 `
@@ -19,11 +19,16 @@ export const CardIsNotLogin = styled(Card)<{
 export const ContainerIsNotLogin = styled(Container)`
     justify-content: center;
     align-items: center;
+    display: flex;
+`
+
+export const ContainerInFlex = styled(ContainerIsNotLogin)`
+    background-color: #d2e2e7;
 `
 
 /** 콘텐츠에 메인 제목 */
 export const TitleText = styled(Text)<{
-    paddingTop: string,
+    paddingTop?: string,
     color: string
 }>`
     font-size: 18px;
@@ -38,4 +43,15 @@ export const SubText = styled(Text)<{
 
 }>`
 
+`
+
+/** 콘텐츠의 이미지 */
+export const Img = styled.Image<{
+    width: number,
+    height: number,
+    marginTop?: string
+}>`
+    width: ${(props) => props.width}px;
+    height: ${(props) => props.height}px;
+    margin-top: ${(props) => props.marginTop}px;
 `
