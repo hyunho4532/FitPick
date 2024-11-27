@@ -10,8 +10,8 @@ export function IsNotLoginCard({ url, index }: Props) {
         <ContainerInFlex key={index}>
             <TitleText color="black">{url.title}</TitleText>
             <Img
-              width={50}
-              height={50}
+              width={32}
+              height={32}
               source={{
                 uri: url.imageUrl
               }}

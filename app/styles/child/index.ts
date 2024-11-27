@@ -1,19 +1,10 @@
 import styled from '@emotion/native'
-import { Card, Container, Text } from '../base'
+import { Container, Text } from '../base'
 
 export const ContainerRoot = styled(Container)`
     flex: 1;
 `
 
-/** 로그인이 진행되지 않았을 때의 Card 속성 */
-export const CardIsNotLogin = styled(Card)<{
-    backgroundColor: string
-}>`
-    width: 320px;
-    height: 280px;
-    background-color: ${(props) => props.backgroundColor};
-    border-radius: 24px;
-`
 
 /** 로그인이 진행되지 않았을 때의 View 속성 */
 export const ContainerIsNotLogin = styled(Container)`
@@ -24,6 +15,7 @@ export const ContainerIsNotLogin = styled(Container)`
 
 export const ContainerInFlex = styled(ContainerIsNotLogin)`
     background-color: #d2e2e7;
+    flex-direction: row;
 `
 
 /** 콘텐츠에 메인 제목 */
@@ -54,4 +46,6 @@ export const Img = styled.Image<{
     width: ${(props) => props.width}px;
     height: ${(props) => props.height}px;
     margin-top: ${(props) => props.marginTop}px;
+    margin-bottom: 14px;
+    margin-left: 14px;
 `
