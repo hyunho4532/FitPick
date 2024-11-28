@@ -1,4 +1,5 @@
-import { ContainerInFlex, Img, TitleText } from "@/app/styles/child";
+import { Img, TitleText } from "@/app/styles/child";
+import { CardInFlex, CardIsNotLoginBody } from "@/app/styles/child/card";
 
 type Props = {
     url: any,
@@ -7,16 +8,18 @@ type Props = {
 
 export function IsNotLoginCard({ url, index }: Props) {
     return (
-        <ContainerInFlex key={index}>
-            <TitleText color="black">{url.title}</TitleText>
-            <Img
-              width={32}
-              height={32}
-              source={{
-                uri: url.imageUrl
-              }}
-              marginTop="16"
-            />
-        </ContainerInFlex>
+        <CardIsNotLoginBody backgroundColor="#e2e2e2">
+            <CardInFlex>
+                <TitleText color="black">{url.title}</TitleText>
+                <Img
+                width={32}
+                height={32}
+                source={{
+                    uri: url.imageUrl
+                }}
+                marginTop="16"
+                />
+            </CardInFlex>
+        </CardIsNotLoginBody>
     )
 }

@@ -13,11 +13,6 @@ export const ContainerIsNotLogin = styled(Container)`
     display: flex;
 `
 
-export const ContainerInFlex = styled(ContainerIsNotLogin)`
-    background-color: #d2e2e7;
-    flex-direction: row;
-`
-
 /** 콘텐츠에 메인 제목 */
 export const TitleText = styled(Text)<{
     paddingTop?: string,

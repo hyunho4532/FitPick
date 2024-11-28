@@ -10,5 +10,11 @@
         "title": "카카오 로그인",
         "description": "카카오 로그인을 진행합니다.",
         "imageUrl": "https://nimage.newsway.co.kr/photo/2024/07/18/20240718000073_0640.jpg"
+    },
+    {
+        "id": 3,
+        "title": "사용자 로그인",
+        "description": "사용자 로그인을 진행합니다.",
+        "imageUrl": "https://png.pngtree.com/png-vector/20191009/ourmid/pngtree-user-icon-png-image_1796659.jpg"
     }
 ]
