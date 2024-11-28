@@ -1,7 +1,7 @@
+import { ContainerRoot } from './styles/child';
 import { useLayoutRootView } from '@/hooks/useLayoutRootView';
 import { initSplashScreen } from '@/shared/initSplashScreen';
 import { Stacks } from '@/components/stack';
-import { ContainerRoot } from './styles/child';
 
 initSplashScreen({
   _duration: 3000,
