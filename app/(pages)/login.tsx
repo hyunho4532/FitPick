@@ -1,4 +1,4 @@
-export function AppBar() {
+export function LoginPage() {
     return (
         <>
         </>
