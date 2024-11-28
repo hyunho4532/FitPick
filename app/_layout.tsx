@@ -1,5 +1,4 @@
-import { View } from 'react-native';
-import { Stack } from 'expo-router';
+import { ContainerRoot } from './styles/child';
 import { useLayoutRootView } from '@/hooks/useLayoutRootView';
 import { initSplashScreen } from '@/shared/initSplashScreen';
 import { Stacks } from '@/components/stack';
@@ -14,8 +13,8 @@ export default function RootLayout() {
   const onLayoutRootView = useLayoutRootView();
 
   return (
-    <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
+    <ContainerRoot onLayout={onLayoutRootView}>
       <Stacks />
-    </View>
-  );
+    </ContainerRoot>
+  )
 }
