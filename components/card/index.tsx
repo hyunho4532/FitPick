@@ -11,7 +11,7 @@ export function IsNotLoginCard({ url, index }: Props) {
     return (
         <CardIsNotLoginBody backgroundColor="#e2e2e2">
             <CardInFlex>
-                <Link push href={url.redirect}>
+                <Link href={url.oauth}>
                     <CardIsNotLoginContent>
                         <TitleText color="black">{url.title}</TitleText>
                         <Img width={32} height={32}

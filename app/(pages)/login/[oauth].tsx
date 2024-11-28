@@ -1,4 +1,4 @@
-export function LoginPage() {
+export function Loginpage() {
     return (
         <>
         </>

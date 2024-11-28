@@ -1,7 +1,7 @@
 import { ContainerIsNotLogin, Img, TitleText } from "../styles/child";
 import data from '../../schema/images.json';
 import { IsNotLoginCard } from "@/components/card";
-import { CardIsNotLoginBody, CardIsNotLoginHeader } from "../styles/child/card";
+import { CardIsNotLoginHeader } from "../styles/child/card";
 
 export default function ProfileScreen() {
   return (
