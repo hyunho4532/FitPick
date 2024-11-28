@@ -6,7 +6,7 @@ export function Stacks() {
             headerShown: false
         }}>
             <Stack.Screen name="(tabs)" />
-            <Stack.Screen name="(pages)/login/[oauth]" />
+            <Stack.Screen name="_pages/[oauth]" />
             <Stack.Screen name="+not-found" />
         </Stack>
     )
