@@ -1,9 +1,9 @@
 import styled from '@emotion/native'
 
 export const Label = styled.View`
-    width: 80px;
+    width: 100%;
     height: 26px;
+    margin-left: 28px;
     display: flex;
-    align-items: start;
-    justify-content: start;
+    flex-direction: row;
 `

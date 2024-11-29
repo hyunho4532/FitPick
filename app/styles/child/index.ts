@@ -5,7 +5,6 @@ export const ContainerRoot = styled(Container)`
     flex: 1;
 `
 
-
 /** 로그인이 진행되지 않았을 때의 View 속성 */
 export const ContainerIsNotLogin = styled(Container)`
     justify-content: center;
@@ -16,12 +15,16 @@ export const ContainerIsNotLogin = styled(Container)`
 /** 콘텐츠에 메인 제목 */
 export const TitleText = styled(Text)<{
     paddingTop?: string,
-    color: string
+    paddingLeft?: string,
+    fontSize?: string
+    color: string,
+    align?: string
 }>`
-    font-size: 18px;
+    font-size: ${(props) => props.fontSize != null ? props.fontSize : '18px'};
     font-weight: bold;
-    text-align: center;
+    text-align: ${(props) => props.align != null ? props.align : 'center'};
     padding-top: ${(props) => props.paddingTop}px;
+    padding-left: ${(props) => props.paddingLeft}px;
     color: ${(props) => props.color};
 `
 
