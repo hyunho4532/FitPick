@@ -1,8 +1,10 @@
-import styled from '@emotion/native'
+import { StyleSheet } from 'react-native'
 
-/**
- * 모든 Field를 여기에 관리한다.
- */
-export const TextInput = styled.TextInput`
-
-`
+export const TextInputStyle = StyleSheet.create({
+    textInput: {
+        width: 360,
+        height: 40,
+        borderWidth: 1,
+        borderColor: "gray"
+    }
+})
