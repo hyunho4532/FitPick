@@ -10,6 +10,9 @@ import { useGlobalSearchParams } from "expo-router/build/hooks";
  * InputField @params
  *      labelText: label에 보여지는 텍스트 입력, 
  *      placeholder: 사용자가 Input에 아무런 값을 입력하지 않았을 때
+ * 
+ * CheckBox @params
+ *      labelText: label에 보여지는 텍스트 입력,
  */
 export default function Loginpage() {
 
@@ -49,7 +52,8 @@ export default function Loginpage() {
 
             <Spacer height="40" />
 
-            <CheckBox />
+            <CheckBox
+                labelText="성별 선택" />
 
         </ContainerRoot>
     )

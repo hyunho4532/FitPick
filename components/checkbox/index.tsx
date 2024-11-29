@@ -1,11 +1,18 @@
-import { CheckBox as CB, BottomSheet } from '@rneui/themed';
+import { TitleText } from '@/app/styles/child';
+import { Label } from '@/app/styles/child/label';
+import { Checkbox as CB } from 'expo-checkbox';
 
-export function CheckBox() {
+type Props = {
+    labelText: string,
+}
+
+export function CheckBox({ labelText }: Props) {
     return (
-        <CB
-            center
-            title={"남자"}
-            checked
-        />
+        <>
+            <Label>
+                <TitleText color='black'>{labelText}</TitleText>
+            </Label>
+            <CB />
+        </>
     )
 }
