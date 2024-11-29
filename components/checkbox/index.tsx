@@ -1,7 +1,11 @@
-import { CheckBox} from 'react-native';
+import { CheckBox as CB, BottomSheet } from '@rneui/themed';
 
-export function CheckBoxs() {
+export function CheckBox() {
     return (
-        <CheckBox
+        <CB
+            center
+            title={"남자"}
+            checked
+        />
     )
 }

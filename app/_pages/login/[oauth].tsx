@@ -1,5 +1,6 @@
 import { ContainerRoot, TitleText } from "@/app/styles/child";
 import { Spacer } from "@/app/styles/child/spacer";
+import { CheckBox } from "@/components/checkbox";
 import { InputField } from "@/components/field";
 import { useRouter, } from "expo-router";
 import { useGlobalSearchParams } from "expo-router/build/hooks";
@@ -47,6 +48,8 @@ export default function Loginpage() {
                 placeholder="패스워드를 입력하세요!" />
 
             <Spacer height="40" />
+
+            <CheckBox />
 
         </ContainerRoot>
     )
