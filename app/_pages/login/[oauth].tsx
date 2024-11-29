@@ -4,6 +4,12 @@ import { InputField } from "@/components/field";
 import { useRouter, } from "expo-router";
 import { useGlobalSearchParams } from "expo-router/build/hooks";
 
+/**
+ * 로그인 페이지
+ * InputField @params
+ *      labelText: label에 보여지는 텍스트 입력, 
+ *      placeholder: 사용자가 Input에 아무런 값을 입력하지 않았을 때
+ */
 export default function Loginpage() {
 
     const router = useRouter();
@@ -39,6 +45,9 @@ export default function Loginpage() {
             <InputField 
                 labelText="패스워드" 
                 placeholder="패스워드를 입력하세요!" />
+
+            <Spacer height="40" />
+
         </ContainerRoot>
     )
 }
