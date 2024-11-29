@@ -13,6 +13,7 @@ import { useGlobalSearchParams } from "expo-router/build/hooks";
  * 
  * CheckBox @params
  *      labelText: label에 보여지는 텍스트 입력,
+ *      checkBoxSubText: CheckBox 옆에 보여지는 텍스트 입력
  */
 export default function Loginpage() {
 
@@ -53,7 +54,9 @@ export default function Loginpage() {
             <Spacer height="40" />
 
             <CheckBox
-                labelText="성별 선택" />
+                labelText="성별 선택"
+                checkBoxSubText={["남자 🧑", "여자 👩"]}
+                checkBoxCount={2} />
 
         </ContainerRoot>
     )

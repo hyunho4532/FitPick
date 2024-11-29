@@ -5,6 +5,17 @@ export const ContainerRoot = styled(Container)`
     flex: 1;
 `
 
+export const ContainerRows = styled(ContainerRoot)`
+    flex-direction: row;
+    display: flex;
+`
+
+export const ContainerContent = styled(ContainerRows)`
+    margin-top: 12px;
+    margin-left: 28px;
+    justify-content: left;
+`
+
 /** 로그인이 진행되지 않았을 때의 View 속성 */
 export const ContainerIsNotLogin = styled(Container)`
     justify-content: center;
