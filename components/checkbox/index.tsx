@@ -1,8 +1,6 @@
 import { ContainerContent, ContainerRows, TitleText } from '@/app/styles/child';
-import { CheckBoxStyle } from '@/app/styles/child/checkbox';
 import { Label } from '@/app/styles/child/label';
-import { Spacer } from '@/app/styles/child/spacer';
-import { Checkbox as CB } from 'expo-checkbox';
+import { checkBoxList } from '@/shared/list/checkboxList';
 
 type Props = {
     labelText: string,
@@ -18,14 +16,7 @@ export function CheckBox({ labelText, checkBoxSubText }: Props) {
 
             <ContainerRows>
                 <ContainerContent>
-                    { checkBoxSubText.map((data: any) => (
-                        <>
-                            <TitleText color='black' fontSize='14' paddingTop='10'>{data}</TitleText>
-                            <CB style={CheckBoxStyle.checkBox} />
-                            <Spacer width='30' />
-                        </>
-                    )) }
-
+                    {checkBoxList(checkBoxSubText)}
                 </ContainerContent>
             </ContainerRows>
         </>
