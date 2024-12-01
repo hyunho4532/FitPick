@@ -55,8 +55,7 @@ export default function Loginpage() {
 
             <CheckBox
                 labelText="성별 선택"
-                checkBoxSubText={["남자 🧑", "여자 👩"]}
-                checkBoxCount={2} />
+                checkBoxSubText={["남자 🧑", "여자 👩"]} />
 
         </ContainerRoot>
     )

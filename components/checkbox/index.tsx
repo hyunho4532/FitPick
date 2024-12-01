@@ -6,11 +6,10 @@ import { Checkbox as CB } from 'expo-checkbox';
 
 type Props = {
     labelText: string,
-    checkBoxSubText: [...any],
-    checkBoxCount: number
+    checkBoxSubText: [...any]
 }
 
-export function CheckBox({ labelText, checkBoxSubText, checkBoxCount }: Props) {
+export function CheckBox({ labelText, checkBoxSubText }: Props) {
     return (
         <>
             <Label>
@@ -19,13 +18,14 @@ export function CheckBox({ labelText, checkBoxSubText, checkBoxCount }: Props) {
 
             <ContainerRows>
                 <ContainerContent>
-                    <TitleText color='black' fontSize='14' paddingTop='10'>{checkBoxSubText[0]}</TitleText>
-                    <CB style={CheckBoxStyle.checkBox} />
+                    { checkBoxSubText.map((data: any) => (
+                        <>
+                            <TitleText color='black' fontSize='14' paddingTop='10'>{data}</TitleText>
+                            <CB style={CheckBoxStyle.checkBox} />
+                            <Spacer width='30' />
+                        </>
+                    )) }
 
-                    <Spacer width='40' />
-
-                    <TitleText color='black' fontSize='14' paddingTop='10'>{checkBoxSubText[1]}</TitleText>
-                    <CB style={CheckBoxStyle.checkBox} />
                 </ContainerContent>
             </ContainerRows>
         </>
