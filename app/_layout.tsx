@@ -1,8 +1,7 @@
-import { View } from 'react-native';
-import { Stack } from 'expo-router';
+import { ContainerRoot } from './styles/child';
 import { useLayoutRootView } from '@/hooks/useLayoutRootView';
 import { initSplashScreen } from '@/shared/initSplashScreen';
-import { Stacks } from '@/components/stack';
+import { Stack } from 'expo-router';
 
 initSplashScreen({
   _duration: 3000,
@@ -14,8 +13,14 @@ export default function RootLayout() {
   const onLayoutRootView = useLayoutRootView();
 
   return (
-    <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
-      <Stacks />
-    </View>
-  );
+    <ContainerRoot onLayout={onLayoutRootView}>
+        <Stack screenOptions={{
+            headerShown: false
+        }}>
+            <Stack.Screen name="(tabs)" />
+            <Stack.Screen name="_pages/login/[oauth]" />
+            <Stack.Screen name="+not-found" />
+        </Stack>
+    </ContainerRoot>
+  )
 }
